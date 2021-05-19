@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
+
+@mixin centered(){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+$chars : 10;
+$duration : .25s;
+$bounce : cubic-bezier(.4,1.4,.75,.9);
+$scale : 1;
+$textcolor: rgb(148, 219, 42);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  li{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
+  font-family: 'Roboto Mono', monospace;
+}
+
+body,html{
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #000000;
+  color: green;
+}
+
+nav {
+  min-height: 50px;
+  background-color: grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include centered();
+  justify-content: space-around;
+  width: 100%;
+  padding: 10px 25px;
+  .logo {
+    @include centered();
+    h1 {
+      font: bold;
+      white-space: nowrap;
+      color: whitesmoke;
+      font-size: 30px;
+      letter-spacing: 2px;
+      cursor: default;
+    }
+    span {
+      display: inline-block;
+      animation: stretch $chars*$duration $bounce infinite;
+      transform-origin: center;
+      @for $i from 1 through $chars {
+        &:nth-of-type(#{$i}) {
+          animation-delay: $i*$duration;
+        }
+      }
+    }
+  }
+  .navbar{
+    ul{
+      @include centered();
+      li{
+        padding-left: 32px;
+        &:nth-last-child(4){
+          padding-left: 0;
+        }
+        a{
+          color: rgb(184, 228, 243);
+          transition: .3s all ease;
+        }
+        &:hover a{
+          color: greenyellow;
+          transition: .7s all ease;
+        }
+      }
+    }
+  }
+}
+
+
+.big-header{
+  color: $textcolor;
+  margin-top: 120px;
+  text-align: center;
+  letter-spacing: 12px;
+  font-size: 52px;
+}
+
+
+.about-container {
+  max-width: 700px;
+  margin: 80px auto 0 auto;
+  border: 1px solid rgba($textcolor, .4);
+  min-height: 500px;
+  max-height: auto;
+  .about-top{
+    padding: 5px 20px;
+    @include centered();
+    justify-content:space-between;
+    background-color: rgb(104, 101, 101);
+    color: black;
+    h4{
+      cursor: pointer;
+      font-weight: 600;
+      &:hover {
+        color: whitesmoke;
+      }
+    }
+    ul{
+      @include centered();
+      li{
+        padding-left: 10px;
+        cursor: pointer;
+        &:hover {
+          color: whitesmoke;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes stretch {
+  5% { 
+    transform: scaleX($scale);
+    opacity: .1;
+  }
+  15% { 
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+
+
