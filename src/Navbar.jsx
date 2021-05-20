@@ -1,14 +1,18 @@
 import { useState, useEffect } from 'react'
 
-window.addEventListener('scroll', function () {
-  let header = document.querySelector('nav');
-  header.classList.toggle('active', window.scrollY > 0)
-})
-
-
 const Navbar = () => {
+
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setScroll(window.scrollY > 50)
+    })
+  }, [])
+
+
   return (
-    <nav>
+    <nav className={scroll ? 'active' : ''}>
       <div className="logo">
         <h1><span>E</span><span>R</span><span>A</span><span>Y</span></h1>
       </div>
