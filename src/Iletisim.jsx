@@ -1,8 +1,8 @@
 const Iletisim = () => {
   return (
     <>
-      <h1 className="big-header">ILETISIM</h1>
-      <div className="contact" id="contact">
+      <h1 className="big-header" id="contact">ILETISIM</h1>
+      <div className="contact" >
         <div className="about-top">
           <h4>X</h4>
           <ul>

@@ -15,6 +15,14 @@ const YorumEkle = () => {
     setComment(e.target.value);
   }
 
+  const deleteHandler = (e) => {
+    e.preventDefault();
+    const dlt = [...totalComments];
+    dlt.splice(e, 1);
+    setTotalComments(dlt)
+
+  }
+
 
   useEffect(() => {
 
@@ -33,7 +41,10 @@ const YorumEkle = () => {
           {totalComments && totalComments.map(cm => (
             <div className="eachComment">
               <h3>Değerli Yorum</h3>
-              <p>{cm}</p>
+              <div className="cmnt">
+                <p>{cm}</p>
+                <button className="delete-btn" onClick={deleteHandler}>sil</button>
+              </div>
             </div>
           ))}
         </div>

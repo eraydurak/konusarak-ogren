@@ -22,7 +22,7 @@ const Calismalar = () => {
         <div className="item">
           <img className="item-img" src="https://eray-durak.netlify.app/static/media/triwow.2d068464.png" alt="1" />
           <h3>Triwow</h3><br />
-          <p>Built a quiz game with ReactJs. Drew inspiration from Trivia Crack mobile game and tried to adapt it to web browsers. Used https://opentdb.com/api_category.php for question APIs. We used many technologies in this project such as JavaScript, React, Redux, SASS, React-router-dom, Firebase(Firestore).</p>
+          <p>Built a quiz game with ReactJs. Drew inspiration from Trivia Crack mobile game and tried to adapt it to web browsers. We used many technologies in this project such as JavaScript, React, Redux, SASS, React-router-dom, Firebase(Firestore).</p>
         </div>
         <div className="item">
           <img className="item-img" src="https://eray-durak.netlify.app/static/media/weatherapp.1fe63d41.png" alt="1" />
