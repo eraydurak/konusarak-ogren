@@ -29,10 +29,10 @@ $transiti: 0.4s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
 body,
 html {
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
   // overflow-y: auto;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -393,18 +393,15 @@ footer {
 // RESPONSIVE
 
 @media screen and (min-width: 374px) and (max-width: 767px) {
-  body,
-  html {
-    max-width: 100%;
-  }
   nav {
-    height: auto;
+    position: relative;
     flex-direction: column;
-    max-width: 374px;
+    //max-width: 374px;
     ul {
       max-width: 100%;
       padding: 0;
       margin-top: 20px;
+      flex-direction: column;
       li {
         padding-left: 5px !important;
       }
@@ -416,6 +413,7 @@ footer {
   }
   .big-header {
     font-size: 28px;
+    margin-top: 55px;
   }
   .works {
     .item {
