@@ -4,6 +4,7 @@ import Calismalar from './Calismalar';
 import Iletisim from './Iletisim';
 import './App.scss';
 import YorumEkle from './YorumEkle';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Calismalar />
       <Iletisim />
       <YorumEkle />
+      <Footer />
     </>
   );
 }
